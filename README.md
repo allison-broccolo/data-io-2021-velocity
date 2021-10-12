@@ -41,8 +41,6 @@ We were offered a semi load of dry chickpeas. Is this a good load to accept? We 
 
 Which products are fast-moving and in high-demand?  This will help us make more informed purchasing decisions. Procuring fast moving products frees us space in the warehouse and reduces cost liability of expired items. 
 
-We’d also like to know if there is a bigger need to purchase specialty diet products such as gluten-free, sugar-free, peanut-free, vegan, organic, etc.  Using the velocity report data, we can determine how quickly these types of products are moving based on historical.  We can also see trends.  If the demand increases, then we will purchase more products of that type.  (is this feasible for the challenge?) 
-
 Using the velocity to track the top 100 items, is there low inventory of an item?  If so, we can procure more since we know it moves fast.   
 
 ### Warehouse – Storage planning 
