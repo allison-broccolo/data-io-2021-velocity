@@ -27,43 +27,26 @@ Using the data set, identify a solution for reporting on the velocity of the ite
 
 These items may not be the most distributed throughout the food bank’s history, but instead represent a theoretical inventory model we would like to shift our food sourcing and distribution policies towards. The specific items in our theoretical inventory model will change over time to reflect shifts in product preferences and distribution models. However, developing a methodology to understand the velocity of a given theoretical item is a durable innovation that will remain a part of MOFC’s operations process for years to come. 
 
- The first step in this effort in developing a method to understand how popular any given items are is linking similar item numbers together. E.g. VAP9081 and ZZ549 both represent “Green Peppers”, so how do we link them together? At MOFC, we have been piloting this process during our receiving process for produce item numbers, and have linked select other item numbers to their theoretical items. While we may desire for this process to be more automated or streamlined, that is not the focus of this challenge. 
+ The first step in this effort in developing a method to understand how popular any given items are is linking similar item numbers together. E.g. VAP9081 and ZZ549 both represent “Green Peppers”. Link them together with dim_items.mstr_item_id -> dim_item_master.mstr_item_id. At MOFC, we have been piloting this process during our receiving process for produce item numbers, and have linked select other item numbers to their theoretical items. While we may desire for this process to be more automated or streamlined, that is not the focus of this challenge. 
 
 In FY 2021, we received less than 6000 item numbers, and when we look at produce items we can see we have item number – to – theoretical item linking for 99.6% of those items. Instead of focusing on how to link the item numbers together, our organization is prepared to accomplish this manually. Instead, we want your help exploring the following topics as related to velocity reporting. The velocity tool should provide answers to different questions for each department below: 
 
-## Use Cases
+### Personas
 
-### Food Sourcing 
+*Operations Executive*	- C-Suite individual who is responsible for the operating policies of the organization. Is responsible for managing processes controlling food receipt, inventory, distribution, and associated clerical processes.
 
-Food is sourced by purchasing product, receiving donations, and ordering from various State and Federal programs at zero or low cost. 
+*Food Sourcing Manager* - Manager who is able to source product for distribution. Optimizes choices to secure food donations and minimize costs while also securing a variety of desirable products at a fair price.
 
-We were offered a semi load of dry chickpeas. Is this a good load to accept? We may get them for free, but they will take up room in the warehouse and may prevent us from sourcing other items. How desirable are these products to our customers? How fast will they be ordered and shipped out? If it’s a slow moving product, maybe we don’t want any chickpeas at all? 
+### User Stories
 
-Which products are fast-moving and in high-demand?  This will help us make more informed purchasing decisions. Procuring fast moving products frees us space in the warehouse and reduces cost liability of expired items. 
+![image](https://user-images.githubusercontent.com/11682225/138378579-e8a3259c-88cf-402a-9758-78f3a1b78d56.png)
 
-Using the velocity to track the top 100 items, is there low inventory of an item?  If so, we can procure more since we know it moves fast.   
+### Requirements & Acceptance Criteria
 
-### Warehouse – Storage planning 
+![image](https://user-images.githubusercontent.com/11682225/138378661-6a13b86f-576a-4ba3-b65b-645fdc56943c.png)
 
-We received 5,000 boxes of instant mashed potatoes.  Are these a fast-moving product?  If so, we will store them on the first level of the rack in a prime location with easy access.  If it’s a slower moving product or seasonal, store it on the top rack in a non-prime location. 
-
-We have a shipment coming in of 10,000 gallons of apple juice next week.  Warehouse capacity is high and not much storage is available.  We do not have an open slot large enough for the apple juice shipment.  In the same aisle, we have peanut butter and baby formula which are fast-moving products.  Using the data, determine when there will be space available for the apple juice and plan storage location accordingly which may include rearranging existing product.   
-
-Identify dead inventory, e.g. items which have not moved in 30 days.  Warehouse planning can notify  
-
-### Finance – Cost value 
-
-We have 1 million cans of jelly.  Referring to the velocity report for jelly, it is a slow-moving item.  What is the value of the jelly (which data field is this?)?  The expiration date of the jelly is in two months.  (Expiration dates are tied to the item record).  If we don’t move this jelly soon, we will incur a loss of $10,000 by having to scrap the expired product. 
-
-After reviewing the inventory reports, we notice that we have a large surplus of an item which does not appear in the Top 100 products in the velocity.  Why do we have this much of this item when it doesn’t move fast?  This will enable us to make more informed purchasing decisions of products that move and reduce cost waste. 
 
 ## Data Summary 
-
-### Vocabulary 
-
-Item number - The individual item that is received at a point in time, and has a finite lifetime within MOFC’s operations. 
-
-Theoretical item  - The large concept we link multiple item numbers to. 
 
 ## Data Documentation
 
@@ -71,7 +54,7 @@ Additional Schemas (.png & .pdf) are located in the documentation folder.
 
 Data Schema - Keys Only
 
-![keys_only](https://user-images.githubusercontent.com/11682225/136880382-824c6c04-7d8a-4e53-88a2-e680bc13b345.png)
+![image](documentation/keys_only.png)
 
 ## Data
 
