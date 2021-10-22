@@ -48,19 +48,13 @@ In FY 2021, we received less than 6000 item numbers, and when we look at produce
 
 ## Data Summary 
 
-### Vocabulary 
-
-Item number - The individual item that is received at a point in time, and has a finite lifetime within MOFC’s operations. 
-
-Theoretical item  - The large concept we link multiple item numbers to. 
-
 ## Data Documentation
 
 Additional Schemas (.png & .pdf) are located in the documentation folder.
 
 Data Schema - Keys Only
 
-![keys_only](https://user-images.githubusercontent.com/11682225/136880382-824c6c04-7d8a-4e53-88a2-e680bc13b345.png)
+![image](documentation/keys_only.png)
 
 ## Data
 
