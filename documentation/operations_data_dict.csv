@@ -1,0 +1,109 @@
+"table","column","data_type","pct_populated","n_unique","pct_unique","max","min","mean","median","pct_25","pct_75","sample_value","Description","Key"
+"dim_agencies","agency_id","double",100,2504,100,2538,2,1269.97,1275.5,628.75,1909.25,"1619","Unique, numeric identifier for each agency. One ID per agency.","Primary"
+"dim_agencies","agency_id_rollup","double",23.64,253,10.1,2483,2,1094.8,1268,236,1728,"1619",NA,NA
+"dim_agencies","agency_type","character",86.46,23,0.92,NA,NA,NA,NA,NA,NA,"Pantry","Categorical variable to show what type of agency the agency operates as. E.g. Pantry, Produce Market, Shelter, Day Care, etc.",NA
+"dim_agencies","billing_address1","character",95.17,1884,75.24,NA,NA,NA,NA,NA,NA,"Attn: Mr. Gary M. Dillard","First line of agency's billing address.",NA
+"dim_agencies","billing_address2","character",2.84,71,2.84,NA,NA,NA,NA,NA,NA,"7224 E. Main St.","2nd line of agency's billing address (if applicable).",NA
+"dim_agencies","billing_city","character",95.33,282,11.26,NA,NA,NA,NA,NA,NA,"South Solon","Name of city in which the agency's billing address is located.",NA
+"dim_agencies","billing_state","character",94.65,37,1.48,NA,NA,NA,NA,NA,NA,"OH","2-character abbreviation for the state in which the agency's billing address is located.",NA
+"dim_agencies","billing_zip","character",100,413,16.49,NA,NA,NA,NA,NA,NA,"45153","Billing ZIP code for agency. Sometimes represented as #####, sometimes as #####-####.",NA
+"dim_agencies","county_code","character",100,30,1.2,NA,NA,NA,NA,NA,NA,"MAD","3-character abbreviation for the county in which the agency is located.",NA
+"dim_agencies","county_name","character",99.96,30,1.2,NA,NA,NA,NA,NA,NA,"Madison","Full name of county in which the agency is located.",NA
+"dim_agencies","county_rollup","character",91.89,4,0.16,NA,NA,NA,NA,NA,NA,"Contiguous","MOFC-created grouping for counties for comparison purposes. Can be Franklin, Rural, or Contiguous. Franklin contains Franklin County, Rural contains sparsely-populated counties usually farther away from metro Columbus area, and contigious contains more densely-populated counties usually closer to the metro Columbus area.",NA
+"dim_agencies","is_community_agency","double",100,2,0.08,1,0,0.92,1,1,1,"1","True/False variable for whether or not the agency is a community agency. 1 = True, 0 = False.",NA
+"dim_agencies","name","character",99.96,2464,98.4,NA,NA,NA,NA,NA,NA,"Grace Community Church Food Pantry","Full name of agency.",NA
+"dim_agencies","number","character",100,2504,100,NA,NA,NA,NA,NA,NA,"1575",NA,NA
+"dim_agencies","number_full","character",100,2504,100,NA,NA,NA,NA,NA,NA,"000000001575",NA,NA
+"dim_agencies","representative_name","character",9.9,3,0.12,NA,NA,NA,NA,NA,NA,"B.Nance","Name of agency's representative for point of contact, if applicable.",NA
+"dim_agencies","services_loc_id","integer",87.06,566,22.6,4568,0,383.92,0,0,405.5,"0",NA,"Foreign"
+"dim_agencies","services_reporting_agency_id","integer",87.06,599,23.92,754,0,104.1,0,0,56.25,"0",NA,"Foreign"
+"dim_dates","CalendarQuarter","integer",100,4,0.02,4,1,2.51,3,2,4,"3","Dimension of the date, identifies the quarter of the year for the date.",NA
+"dim_dates","CalendarYear","integer",100,47,0.27,2026,1980,2003,2003,1991,2015,"2026","Dimension of the date, identifies the year of the date.",NA
+"dim_dates","CalendarYearMonth","integer",100,564,3.29,202612,198001,200306.45,200307,199110,201504,"202609","Dimension of the date, combines the CalendarYear and MonthOfYear for a unique identifier for each date.",NA
+"dim_dates","CalendarYearMonthDashed","character",100,564,3.29,NA,NA,NA,NA,NA,NA,"2026-09","Dimension of the date, dashed version of CalendarYearMonth",NA
+"dim_dates","CalendarYearQtr","character",100,188,1.1,NA,NA,NA,NA,NA,NA,"2026Q3","Dimension of the date, combines CalendarYear and CalendarQuarter. Uniquely identies the CalendarYear Quarter and provides nice text version for use on charts and menus.",NA
+"dim_dates","date_key","integer",100,17167,100,20261231,19800101,20030661.03,20030702,19911001.5,20150401.5,"20260930","Primary Key, uniquely identifies the entry. One entry per date, format YYYYMMDD.","Primary"
+"dim_dates","date_m","double",100,17167,100,NA,NA,NA,NA,NA,NA,"20726","Format of the date, MySQL.",NA
+"dim_dates","DateName","character",100,17167,100,NA,NA,NA,NA,NA,NA,"2026/09/30","Format of the date, YYYY/MM/DD, uncomon, but allows text-sorting (A-Z) of dates",NA
+"dim_dates","DayNameOfWeek","character",100,7,0.04,NA,NA,NA,NA,NA,NA,"Wednesday","Dimension of the date, Full length Day of Week",NA
+"dim_dates","DayOfMonth","integer",100,31,0.18,31,1,15.73,16,8,23,"30","Dimension of the date, identifies what day of the month (1 - 31) the date is. Useful for standardizing analysis that crosses months. Advanced usage would be converting this value to a scalar value for continuous comparison.",NA
+"dim_dates","DayOfWeek","integer",100,7,0.04,7,1,4,4,2,6,"4","Dimension of the date, 1 - 7 for the day of the week, 1 = Sunday, 7 = Saturday",NA
+"dim_dates","DayOfYear","integer",100,366,2.13,366,1,183.13,183,92,274,"273","Dimension of the date, identifies what day of the year the date is. Useful for standardizing analysis that crosses years. Advanced usage would be converting this value to a scalar value for continuous comparision of data across years.",NA
+"dim_dates","FullDate","character",100,17167,100,NA,NA,NA,NA,NA,NA,"9/30/2026","Format of the date, D/M/YYYY, common format of date, most of the population would write their dates this way.",NA
+"dim_dates","IsLastDayOfMonth","character",100,2,0.01,NA,NA,NA,NA,NA,NA,"Y","Dimension of the date, identifies if the date is the last day of the month. Options Y or N.",NA
+"dim_dates","IsPublicHoliday","character",100,4,0.02,NA,NA,NA,NA,NA,NA,"N","Dimension of the date, identifies if the date is a public holiday. Options Y or N. A very general implementation of Public Holidays based on broad USA acceptance. Create your own dimension for more specific usage.",NA
+"dim_dates","IsPublicHolidayDescription","character",99.99,32,0.19,NA,NA,NA,NA,NA,NA,"","Text description of the holiday, only present if IsPublicHoliday == Y.",NA
+"dim_dates","JulFiscalMonthOfYear","integer",100,12,0.07,12,1,6.48,6,3,9,"3","Dimension of the date for a July 1 - based fiscal year, number of the month relative to July 1 (1-12).",NA
+"dim_dates","JulFiscalQuarter","integer",100,4,0.02,4,1,2.49,2,1,3,"1","Dimension of the date for a July 1 - based fiscal year, quarter of the year relative to July 1 (1 - 4).",NA
+"dim_dates","JulFiscalYear","integer",100,48,0.28,2027,1980,2003.5,2004,1992,2015,"2027","Dimension of the date for a July 1 - based fiscal year, identifies the Fiscal Year (e.g. 2021).",NA
+"dim_dates","JulFiscalYearMonth","character",100,564,3.29,NA,NA,NA,NA,NA,NA,"FY2027-03","Dimension of the date for a July 1 - based fiscal year, uniquely identifies the month of the fiscal year (e.g. FY2021-07).",NA
+"dim_dates","JulFiscalYearQtr","character",100,188,1.1,NA,NA,NA,NA,NA,NA,"FY2027Q1","Dimension of the date for a July 1 - based fiscal year, uniquely identifies the Quarter of the fiscal year (e.g. FY2021Q3).",NA
+"dim_dates","MonthName","character",100,12,0.07,NA,NA,NA,NA,NA,NA,"September","Month of the date, Full month name",NA
+"dim_dates","MonthOfYear","integer",100,12,0.07,12,1,6.52,7,4,10,"9","Month of the date, number of the month (1-12)",NA
+"dim_dates","MonWeekOfYear","integer",100,53,0.31,53,1,26.59,27,14,40,"40","Dimension of the date, identifies what week the date occurs in - based on a Monday start. Note, the last week of the previous year typically spills over into the beginning of the target year.",NA
+"dim_dates","MonYearWeek","integer",100,2453,14.29,202653,198001,200326.53,200327,199140,201514,"202640","Dimension of the date, identifies what week the date occurs in - based on a Monday start. Combines the MonWeekOfYear with the CalendarYear.",NA
+"dim_dates","nthDow","integer",100,5,0.03,5,1,2.7,3,2,4,"5","Dimension of the date relative to its position in the month. Calculated within a month to tell you what nth DOW you have arrived at. E.g. nthDow 3 - Tuesday means you are in the 3rd Tuesday of the month. This is expecially useful for decoding Food Pantry and other recurring schedules.",NA
+"dim_dates","SunWeekOfYear","integer",100,53,0.31,53,1,26.59,27,14,40,"39","Dimension of the date, identifies what week the date occurs in - based on a Sunday start. Note, the last week of the previous year typically spills over into the beginning of the target year.",NA
+"dim_dates","SunYearWeek","integer",100,2453,14.29,202652,197952,200325.71,200326,199139,201513,"202639","Dimension of the date, identifies what week the date occurs in - based on a sunday start. Combines the SunWeekOfYear with the CalendarYear.",NA
+"dim_dates","WeekdayWeekend","character",100,2,0.01,NA,NA,NA,NA,NA,NA,"Weekday","Dimension of the date, identifies if the date is the Weekend or Weekday",NA
+"dim_item_master","category_id","integer",99.01,92,4.79,122,1,13.29,6,3,6,"3","ID for item's broader category grouping.",NA
+"dim_item_master","dummy_is_fresh","integer",98.96,3,0.16,1,0,0.85,1,1,1,"1","1 = fresh food, 0 = not fresh food",NA
+"dim_item_master","fa_31_cat_id","character",98.96,22,1.15,NA,NA,NA,NA,NA,NA,"28","National product category ID for item as defined by Feeding America.",NA
+"dim_item_master","family_id","integer",99.01,21,1.09,23,1,5.98,4,4,4,"4","ID for item family, a grouping convention created by MOFC",NA
+"dim_item_master","group_food","character",98.96,3,0.16,NA,NA,NA,NA,NA,NA,"food","Groups items into food and non-food",NA
+"dim_item_master","group_fresh","character",98.96,4,0.21,NA,NA,NA,NA,NA,NA,"fresh","Groups items into fresh, not-fresh, and non-food",NA
+"dim_item_master","group_generic","character",98.96,7,0.36,NA,NA,NA,NA,NA,NA,"Fresh Food","Generic item grouping.",NA
+"dim_item_master","mstr_item_id","integer",100,1921,100,2173,1,979.57,961,481,1441,"1053","Unique ID for each item in master list.","Primary"
+"dim_item_master","name","character",99.74,659,34.31,NA,NA,NA,NA,NA,NA,"","Full name of item.",NA
+"dim_item_master","name_category","character",99.01,92,4.79,NA,NA,NA,NA,NA,NA,"Fruits","Name of item's broader category grouping.",NA
+"dim_item_master","name_combi","character",100,1333,69.39,NA,NA,NA,NA,NA,NA,"PAPAYA/PAWPAW PAPAYA (ANY)","name_commodity + nickname combined into one string.",NA
+"dim_item_master","name_commodity","character",99.01,364,18.95,NA,NA,NA,NA,NA,NA,"PAPAYA/PAWPAW","Name of item's commodity grouping.",NA
+"dim_item_master","name_fa_31_cat","character",98.96,22,1.15,NA,NA,NA,NA,NA,NA,"FRESH PRODUCE","National product category name for item as defined by Feeding America.",NA
+"dim_item_master","name_family","character",99.01,21,1.09,NA,NA,NA,NA,NA,NA,"Produce","Name of item family, a grouping convention created by MOFC",NA
+"dim_item_master","nickname","character",100,1027,53.46,NA,NA,NA,NA,NA,NA,"PAPAYA (ANY)","Shortened name of item.",NA
+"dim_item_master","number","character",100,1470,76.52,NA,NA,NA,NA,NA,NA,"4396","PLU number for item.",NA
+"dim_item_master","ranking","integer",5,97,5.05,96,1,48.5,48.5,24.75,72.25,"58","The relevant importance of the master item within MOFC's inventory. Lower rank = more important.",NA
+"dim_items","case_weight","double",100,1556,1.49,4153,0,19.68,14,7,25.99,"4","Weight of item in pounds.",NA
+"dim_items","category_code","character",100,31,0.03,NA,NA,NA,NA,NA,NA,"28","Numeric code denoting which category item falls within.",NA
+"dim_items","category_grouping","character",100,6,0.01,NA,NA,NA,NA,NA,NA,"Fresh Food","Broader item grouping item falls within. Options are: Beverages, Canned & Boxed Food, Fresh Food, Junk Food, Mixed and Assorted Food, Non Food.",NA
+"dim_items","category_is_food","character",100,2,0,NA,NA,NA,NA,NA,NA,"food","Dummy variable to show whether item is food or not. ""food"" = item is food; ""non=food"" = item is not food.",NA
+"dim_items","category_is_fresh","character",100,3,0,NA,NA,NA,NA,NA,NA,"fresh","Categorical variable to denote whether food items are considered fresh or not. Fresh foods are denoted as ""fresh"", non-fresh foods are denoted as ""not-fresh"", and non-food items are denoted as ""non-food"".",NA
+"dim_items","category_name","character",100,31,0.03,NA,NA,NA,NA,NA,NA,"FRESH PRODUCE","Plaintext name of category item falls within.",NA
+"dim_items","item_id","double",100,104415,100,105087,1,52508.44,52499,26136.5,78878.5,"88230","Unique identifier for each item, specific to dim_items table.","Primary"
+"dim_items","match_status","character",100,2,0,NA,NA,NA,NA,NA,NA,"matched","Dummy variable for whether or not item has been matched to a PLU. ""matched"" = item has been matched to a PLU; ""needs_match"" = item does not yet have a match.",NA
+"dim_items","material_cost_code","character",100,33,0.03,NA,NA,NA,NA,NA,NA,"AG","Two-character code denoting what category of material cost item falls within.",NA
+"dim_items","material_cost_name","character",100,32,0.03,NA,NA,NA,NA,NA,NA,"Agriculture","Plaintext name of category of material cost item falls within.",NA
+"dim_items","material_donation_status","character",100,2,0,NA,NA,NA,NA,NA,NA,"sourced","Categorical variable showing whether an item was donated to us or sourced otherwise.",NA
+"dim_items","name","character",100,50729,48.58,NA,NA,NA,NA,NA,NA,"Cabbage/special ag","Plaintext name for each type of item data exist for.",NA
+"dim_items","number","character",100,104415,100,NA,NA,NA,NA,NA,NA,"OAS910447","Unique identifier for each item, specific to naming convention found in name column.",NA
+"dim_items","packaging","character",100,26135,25.03,NA,NA,NA,NA,NA,NA,"4 LB.CASE","Type and size of packaging.",NA
+"dim_items","storage_method","character",100,4,0,NA,NA,NA,NA,NA,NA,"RF","Two-character code to denote what storage method is used for the item. DR = dry storage; FZ = frozen; RF = refrigerated.",NA
+"fact_inventory","case_count_allocated","double",100,213,27.2,10557,0,99.95,7,0,65,"0","How many cases-worth of the item associated with the inventory entry we have allocated for future storage.",NA
+"fact_inventory","case_count_available","double",100,318,40.61,39996,0,711.13,8,0,539,"911","How many cases of the item associated with the inventory entry we currently have available to be moved.",NA
+"fact_inventory","case_count_last_sold","double",100,125,15.96,8773,0,112.97,3,1,15,"0","How many cases of the item were sold in the last transaction the item was sold in.",NA
+"fact_inventory","case_count_on_hand","double",100,410,52.36,44448,1,811.09,110,17.5,752.5,"911","How many cases of the item associated with the inventory entry we currently have in storage.",NA
+"fact_inventory","date_extracted","character",100,1,0.13,NA,NA,NA,NA,NA,NA,"Thu Oct 21 21:36:06 2021","Date on which data was most recently extracted.",NA
+"fact_inventory","date_last_sold","integer",100,59,7.54,20211021,0,15409879.16,20211020,20210669,20211021,"0","Date on which we last sold an item associated with the inventory entry. Foreign key with dim_dates.","Foreign"
+"fact_inventory","inventory_id","double",100,783,100,142315,27957,132567.2,140409,136522,141643.5,"142225","Unique identifier for each inventory entry.","Primary"
+"fact_inventory","item_id","double",100,763,97.45,105087,2154,97870.65,104390,102851,104848.5,"105057","Unique identifier for what type of item is associated with each inventory entry. Matches with dim_items table.","Foreign"
+"fact_inventory","location","character",100,9,1.15,NA,NA,NA,NA,NA,NA,"HLD","3-character abbreviation for where the inventory item is currently stored.",NA
+"fact_inventory","unit_price","double",100,28,3.58,30,0,0.67,0,0,0,"0","Price of each unit in dollars.",NA
+"fact_invoice_items","agency_id","double",100,990,0.1,2534,2,1026.81,1082,202,1716,"1906","ID for agency that submitted order. Foreign key for dim_agencies.","Foreign"
+"fact_invoice_items","cases","double",100,4042,0.4,272894,-77518,92.47,10,3,46,"60","Total number of cases of item ordered.",NA
+"fact_invoice_items","cost_class","character",100,4,0,NA,NA,NA,NA,NA,NA,"Free","Category of cost for item in order.",NA
+"fact_invoice_items","date","integer",100,1322,0.13,20211021,20180101,20195713.37,20200107,20190304,20201105,"20180926","Date which order is placed on.","Foreign"
+"fact_invoice_items","item_id","double",100,21412,2.14,105078,2089,87009.64,88985,86301,96629,"75384","Unique, numeric identifier for each item within each order.","Primary/Foreign"
+"fact_invoice_items","order_number","character",100,134640,13.46,NA,NA,NA,NA,NA,NA,"00394753","Unique, numeric identifier for each order. This column + item_id makes up Primary key.","Primary"
+"fact_invoice_items","order_shipping_code","character",100,57,0.01,NA,NA,NA,NA,NA,NA,"PPW","3-character code for order shipping method category.",NA
+"fact_invoice_items","order_shipping_code_name","character",100,57,0.01,NA,NA,NA,NA,NA,NA,"Produce PK Weds","Plaintext name for order shipping method category.",NA
+"fact_invoice_items","price_per_lbs","double",100,947,0.09,8,0,0.07,0,0,0.08,"0","Price per pound of item in order in USD.",NA
+"fact_invoice_items","unit_price","double",100,798,0.08,79.45,0,1.14,0,0,0.72,"0","Price per unit for each item in each order.",NA
+"fact_invoice_items","unit_weight","double",100,1156,0.12,1602,0,17.12,12,1,25,"1","Weight per unit for each item in each order, in pounds.",NA
+"fact_invoice_items","weight","double",100,13050,1.3,272894,-160242,282.25,84,33.75,240,"60","Total weight of item amount ordered, in pounds.",NA
+"fact_receipts","cases","double",100,6026,1.87,79999,1,324.98,75,30,195,"75","Number of cases of item purchased in receipt.",NA
+"fact_receipts","date","integer",100,1224,0.38,20211021,20180101,20195669.7,20200104,20190204,20201130,"20191014","Numeric representation of date which item was purchased in YYYYMMDD format. Foreign key with dim_dates.","Foreign"
+"fact_receipts","item_id","double",100,21339,6.62,105087,2089,76432.2,88688,55359,88691,"88690","ID for item in receipt entry. Foreign key with dim_items table.","Foreign"
+"fact_receipts","order_number","character",100,122912,38.14,NA,NA,NA,NA,NA,NA,"28728500","Unique numeric identifier for order that receipt is associated with.",NA
+"fact_receipts","receipt_item_id","double",100,322233,100,1320260,869980,1123659.6,1133727,1033874,1227270,"1109923","Unique, numeric identifier for each item within each order receipt.","Primary"
+"fact_receipts","vendor_id","double",100,1103,0.34,6513,3,3233.89,2990,2800,4296,"3051","Unique identifier for vendor associated with receipt.",NA
+"fact_receipts","weight","double",100,9429,2.93,30937500,0,1120.22,89,35,244,"75","Weight in pounds of item purchased in receipt.",NA
